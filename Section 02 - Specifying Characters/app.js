@@ -6,12 +6,12 @@ let phoneNums = ["801-766-9754", "801-545-5454", "435-666-1212", "801-796-8010",
 
 
 function getPhoneNumbersWith801AreaCode(phoneNumbersArray) {
-	let PhoneNumbersWith801AreaCode = [];
+	const PhoneNumbersWith801AreaCode = [];
 
 	for(let i = 0; i < phoneNumbersArray.length; i++) {
 		const phoneNumber = phoneNumbersArray[i];
 	
-		if (isPhoneNumber801AreaCode(phoneNumber))
+		if (_isPhoneNumber801AreaCode(phoneNumber))
 			PhoneNumbersWith801AreaCode.push(phoneNumber);
 	}
 
@@ -19,7 +19,7 @@ function getPhoneNumbersWith801AreaCode(phoneNumbersArray) {
 }
 
 
-function isPhoneNumber801AreaCode(phoneNumber) {
+function _isPhoneNumber801AreaCode(phoneNumber) {
 	const match = phoneNumber.search(/801/);
 
 	if (match === 0)
